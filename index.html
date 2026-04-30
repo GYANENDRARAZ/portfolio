@@ -9,8 +9,8 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f172a;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
     color: white;
 }
 
@@ -20,7 +20,8 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 15px;
-    background: #020617;
+    background: rgba(2,6,23,0.8);
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
 }
@@ -38,46 +39,54 @@ nav a:hover {
 /* HERO */
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
 }
 
-h1 { font-size: 42px; margin-bottom: 10px; }
-h2 { margin-bottom: 20px; }
+h1 {
+    font-size: 48px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-p { color: #cbd5e1; }
-
-/* BUTTONS */
 .btn {
     display: inline-block;
     padding: 12px 22px;
     margin: 10px;
-    background: #3b82f6;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-.btn:hover { background: #2563eb; }
+.btn:hover {
+    transform: scale(1.05);
+}
 
 /* SECTIONS */
 section {
-    padding: 50px 20px;
-    max-width: 1000px;
+    padding: 60px 20px;
+    max-width: 1100px;
     margin: auto;
 }
 
+/* GLASS CARD */
 .card {
-    background: #1e293b;
-    padding: 20px;
+    background: rgba(30,41,59,0.6);
+    backdrop-filter: blur(12px);
+    padding: 25px;
     margin: 15px 0;
-    border-radius: 12px;
-    text-align: left;
+    border-radius: 16px;
+    transition: 0.3s;
 }
 
-ul { padding-left: 20px; }
+.card:hover {
+    transform: translateY(-6px);
+}
 
-/* KPI CARDS */
+/* KPI */
 .kpi-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -85,61 +94,43 @@ ul { padding-left: 20px; }
 }
 
 .kpi-card {
-    background: linear-gradient(145deg, #1e293b, #0f172a);
+    background: rgba(30,41,59,0.6);
     padding: 25px;
     border-radius: 16px;
     text-align: center;
-    border: 1px solid #334155;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
 }
-
-.kpi-card::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(59,130,246,0.3), transparent);
-    top: -100%;
-    left: 0;
-    transition: 0.5s;
-}
-
-.kpi-card:hover::before { top: 100%; }
 
 .kpi-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border: 1px solid #3b82f6;
-}
-
-.kpi-card .icon {
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-
-.kpi-card h3 {
-    margin: 10px 0 5px;
-    font-size: 20px;
-}
-
-.kpi-card p {
-    color: #94a3b8;
-    font-size: 14px;
+    transform: translateY(-8px) scale(1.03);
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
 }
 
 .kpi-card span {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #3b82f6;
+}
+
+/* PROJECT */
+.project-card {
+    background: rgba(30,41,59,0.6);
+    padding: 20px;
+    border-radius: 16px;
+    margin: 15px 0;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.02);
 }
 
 /* RESUME */
 iframe {
     width: 100%;
     height: 600px;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 /* FOOTER */
@@ -147,7 +138,6 @@ footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-    color: #94a3b8;
 }
 </style>
 
@@ -155,177 +145,148 @@ footer {
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
 
 <!-- HERO -->
 
 <header>
-    <h1>Hi, I'm Gyanendra Raz 👋</h1>
-    <p>Data Analyst | SQL | Python | Power BI</p>
+<h1>Gyanendra Raz</h1>
+<p>Data Analyst | SQL | Python | Power BI</p>
 
-
-<a href="Gyanendra_Raz-Data_Analyst.pdf" download class="btn">⬇ Download Resume</a>
-<a href="https://github.com/gyanendraraz" target="_blank" class="btn">GitHub</a>
-<a href="https://www.linkedin.com/in/g7542/" target="_blank" class="btn">LinkedIn</a>
-
+<a href="Gyanendra_Raz-Data_Analyst.pdf" download class="btn">Download Resume</a> <a href="https://github.com/gyanendraraz" target="_blank" class="btn">GitHub</a> <a href="https://www.linkedin.com/in/g7542/" target="_blank" class="btn">LinkedIn</a>
 
 </header>
 
 <!-- ABOUT -->
 
 <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            Data Analyst with 3+ years of experience analyzing large datasets to generate actionable insights and support data-driven decision-making. Skilled in SQL, Python, and dashboard development, with strong expertise in query optimization, reporting automation, and data transformation.
-        </p>
-    </div>
+<h2>About Me</h2>
+<div class="card">
+<p>
+Data Analyst with 3+ years of experience working with large datasets, optimizing SQL queries, and building dashboards. Strong expertise in automation, reporting, and business insights.
+</p>
+</div>
 </section>
 
 <!-- SKILLS KPI -->
 
 <section>
-    <h2>Skills</h2>
-
+<h2>Skills</h2>
 
 <div class="kpi-container">
 
-    <div class="kpi-card">
-        <div class="icon">📊</div>
-        <h3>SQL</h3>
-        <p>Advanced Queries</p>
-        <span>3+ Years</span>
-    </div>
-
-    <div class="kpi-card">
-        <div class="icon">🐍</div>
-        <h3>Python</h3>
-        <p>Pandas, Analysis</p>
-        <span>Automation</span>
-    </div>
-
-    <div class="kpi-card">
-        <div class="icon">📈</div>
-        <h3>Power BI</h3>
-        <p>Dashboards & DAX</p>
-        <span>Reporting</span>
-    </div>
-
-    <div class="kpi-card">
-        <div class="icon">📑</div>
-        <h3>Excel</h3>
-        <p>Pivot & Models</p>
-        <span>Advanced</span>
-    </div>
-
-    <div class="kpi-card">
-        <div class="icon">⚙️</div>
-        <h3>ETL</h3>
-        <p>Data Cleaning</p>
-        <span>Pipeline</span>
-    </div>
-
-    <div class="kpi-card">
-        <div class="icon">⚡</div>
-        <h3>Optimization</h3>
-        <p>Query Performance</p>
-        <span>+30% Speed</span>
-    </div>
-
+<div class="kpi-card">
+<h3>SQL</h3>
+<p>Advanced</p>
+<span>3+ Years</span>
 </div>
 
+<div class="kpi-card">
+<h3>Python</h3>
+<p>Pandas</p>
+<span>Automation</span>
+</div>
 
+<div class="kpi-card">
+<h3>Power BI</h3>
+<p>Dashboards</p>
+<span>DAX</span>
+</div>
+
+<div class="kpi-card">
+<h3>Excel</h3>
+<p>Advanced</p>
+<span>Reporting</span>
+</div>
+
+<div class="kpi-card">
+<h3>ETL</h3>
+<p>Data Cleaning</p>
+<span>Pipelines</span>
+</div>
+
+<div class="kpi-card">
+<h3>Optimization</h3>
+<p>Performance</p>
+<span>+30%</span>
+</div>
+
+</div>
 </section>
 
 <!-- EXPERIENCE -->
 
 <section id="experience">
-    <h2>Experience</h2>
-
+<h2>Experience</h2>
 
 <div class="card">
-    <h3>Data Analyst – Telus International</h3>
-    <p>Feb 2023 – Feb 2026 | Gujarat</p>
-    <ul>
-        <li>Optimized complex SQL queries for business insights</li>
-        <li>Built dashboards using Excel & Power BI</li>
-        <li>Automated reports reducing manual effort</li>
-        <li>Analyzed SLA, CSAT, and performance metrics</li>
-        <li>Worked with cross-functional teams</li>
-    </ul>
+<h3>Data Analyst – Telus International</h3>
+<p>2023 – 2026</p>
+<ul>
+<li>Optimized SQL queries</li>
+<li>Built dashboards</li>
+<li>Automated reports</li>
+</ul>
 </div>
 
 <div class="card">
-    <h3>Business Analyst – Valeo</h3>
-    <p>Mar 2022 – Dec 2022 | Chennai</p>
-    <ul>
-        <li>Reduced reporting effort by 30% using SQL automation</li>
-        <li>Created stored procedures and views</li>
-        <li>Analyzed user engagement data</li>
-    </ul>
+<h3>Business Analyst – Valeo</h3>
+<p>2022</p>
+<ul>
+<li>Reduced reporting effort by 30%</li>
+<li>Built SQL procedures</li>
+</ul>
 </div>
-
 
 </section>
 
 <!-- PROJECTS -->
 
 <section id="projects">
-    <h2>Projects</h2>
+<h2>Projects</h2>
 
-
-<div class="card">
-    <h3>📊 Movie Rental Analysis (SQL)</h3>
-    <p>Analyzed rental trends using joins, window functions, and aggregations.</p>
+<div class="project-card">
+<h3>Movie Rental Analysis</h3>
+<p>SQL joins, window functions</p>
+<a href="#" class="btn">View Project</a>
 </div>
 
-<div class="card">
-    <h3>📈 Sales Trend Analysis</h3>
-    <p>Identified revenue trends and category performance using SQL.</p>
+<div class="project-card">
+<h3>Sales Analysis</h3>
+<p>Trend analysis using SQL</p>
+<a href="#" class="btn">View Project</a>
 </div>
-
-<div class="card">
-    <h3>🎓 Coaching Management System</h3>
-    <p>GUI app with attendance tracking, analytics dashboard, and invoice system.</p>
-</div>
-
-<div class="card">
-    <h3>📧 Email Automation Tool</h3>
-    <p>Bulk email sender with tracking and Excel integration.</p>
-</div>
-
 
 </section>
 
 <!-- RESUME -->
 
 <section>
-    <h2>My Resume</h2>
-    <iframe src="Gyanendra_Raz-Data_Analyst.pdf"></iframe>
+<h2>Resume</h2>
+<iframe src="Gyanendra_Raz-Data_Analyst.pdf"></iframe>
 </section>
 
 <!-- CONTACT -->
 
 <section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: gyanendraraz@gmail.com</p>
-        <p>Phone: 7542980819</p>
-        <p>Location: Bengaluru</p>
-    </div>
+<h2>Contact</h2>
+<div class="card">
+<p>Email: gyanendraraz@gmail.com</p>
+<p>Phone: 7542980819</p>
+</div>
 </section>
 
 <!-- FOOTER -->
 
 <footer>
-    <p>© 2026 Gyanendra Raz | Data Analyst</p>
+<p>© 2026 Gyanendra Raz</p>
 </footer>
 
 </body>
