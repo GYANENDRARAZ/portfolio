@@ -2,154 +2,228 @@
 
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gyanendra Raz | Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gyanendra Raz | Data Analyst</title>
 
-```
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: white;
-        text-align: center;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+}
 
-    header {
-        padding: 60px 20px;
-    }
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background: #020617;
+    position: sticky;
+    top: 0;
+}
 
-    h1 {
-        font-size: 40px;
-        margin-bottom: 10px;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    p {
-        color: #cbd5e1;
-    }
+nav a:hover {
+    color: #3b82f6;
+}
 
-    .btn {
-        display: inline-block;
-        padding: 12px 22px;
-        margin: 10px;
-        background: #3b82f6;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+/* HERO */
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-    .btn:hover {
-        background: #2563eb;
-    }
+h1 { font-size: 42px; margin-bottom: 10px; }
+h2 { margin-bottom: 20px; }
 
-    section {
-        padding: 40px 20px;
-    }
+p { color: #cbd5e1; }
 
-    .card {
-        background: #1e293b;
-        margin: 15px auto;
-        padding: 20px;
-        border-radius: 12px;
-        width: 80%;
-    }
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 10px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
-    iframe {
-        border-radius: 10px;
-        margin-top: 20px;
-    }
+.btn:hover { background: #2563eb; }
 
-    footer {
-        margin-top: 40px;
-        padding: 20px;
-        background: #020617;
-        color: #94a3b8;
-    }
+/* SECTIONS */
+section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+    text-align: left;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* RESUME */
+iframe {
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #94a3b8;
+}
 </style>
-```
 
 </head>
 
 <body>
 
-```
-<!-- HERO SECTION -->
+<!-- NAVBAR -->
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+
 <header>
     <h1>Hi, I'm Gyanendra Raz 👋</h1>
-    <p>Data Analyst | SQL | Excel | Power BI</p>
+    <p>Data Analyst | SQL | Python | Power BI</p>
 
-    <!-- Resume Buttons -->
-    <a href="Gyanendra_Raz-Data_Analyst.pdf" target="_blank" class="btn">📄 View Resume</a>
-    <a href="Gyanendra_Raz-Data_Analyst.pdf" download class="btn">⬇ Download Resume</a>
+```
+<a href="Gyanendra_Raz-Data_Analyst.pdf" download class="btn">⬇ Download Resume</a>
+<a href="https://github.com/gyanendraraz" target="_blank" class="btn">GitHub</a>
+<a href="https://www.linkedin.com/in/g7542/" target="_blank" class="btn">LinkedIn</a>
+```
+
 </header>
 
 <!-- ABOUT -->
-<section>
+
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am a Data Analyst with strong skills in SQL, Excel, and Power BI.
-            I enjoy solving real-world business problems using data and building dashboards.
+            Data Analyst with 3+ years of experience analyzing large datasets to generate actionable insights and support data-driven decision-making. Skilled in SQL, Python, and dashboard development, with strong expertise in query optimization, reporting automation, and data transformation.
         </p>
     </div>
 </section>
 
 <!-- SKILLS -->
+
 <section>
     <h2>Skills</h2>
-    <div class="card">SQL</div>
-    <div class="card">Excel</div>
-    <div class="card">Power BI</div>
-    <div class="card">Python</div>
+    <div class="card">
+        SQL • Python (Pandas) • Excel • Power BI • ETL • Data Cleaning • Query Optimization • Reporting Automation
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+    <h2>Experience</h2>
+
+```
+<div class="card">
+    <h3>Data Analyst – Telus International</h3>
+    <p>Feb 2023 – Feb 2026 | Gujarat</p>
+    <ul>
+        <li>Optimized complex SQL queries for business insights</li>
+        <li>Built dashboards using Excel & Power BI</li>
+        <li>Automated reports reducing manual effort</li>
+        <li>Analyzed SLA, CSAT, and performance metrics</li>
+        <li>Worked with cross-functional teams</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h3>Business Analyst – Valeo</h3>
+    <p>Mar 2022 – Dec 2022 | Chennai</p>
+    <ul>
+        <li>Reduced reporting effort by 30% using SQL automation</li>
+        <li>Created stored procedures and views</li>
+        <li>Analyzed user engagement data</li>
+    </ul>
+</div>
+```
+
 </section>
 
 <!-- PROJECTS -->
-<section>
+
+<section id="projects">
     <h2>Projects</h2>
 
-    <div class="card">
-        <h3>Sales Data Analysis</h3>
-        <p>Analyzed sales dataset using SQL and created dashboards in Power BI.</p>
-    </div>
+```
+<div class="card">
+    <h3>📊 Movie Rental Analysis (SQL)</h3>
+    <p>Analyzed rental trends using joins, window functions, and aggregations.</p>
+</div>
 
-    <div class="card">
-        <h3>Customer Insights</h3>
-        <p>Used Excel to generate insights and improve business decision-making.</p>
-    </div>
+<div class="card">
+    <h3>📈 Sales Trend Analysis</h3>
+    <p>Identified revenue trends and category performance using SQL.</p>
+</div>
+
+<div class="card">
+    <h3>🎓 Coaching Management System</h3>
+    <p>GUI app with attendance tracking, analytics dashboard, and invoice system.</p>
+</div>
+
+<div class="card">
+    <h3>📧 Email Automation Tool</h3>
+    <p>Bulk email sender with tracking and Excel integration.</p>
+</div>
+```
 
 </section>
 
-<!-- RESUME PREVIEW -->
+<!-- RESUME -->
+
 <section>
     <h2>My Resume</h2>
-
-    <iframe 
-        src="Gyanendra_Raz-Data_Analyst.pdf" 
-        width="80%" 
-        height="600px">
-    </iframe>
+    <iframe src="Gyanendra_Raz-Data_Analyst.pdf"></iframe>
 </section>
 
 <!-- CONTACT -->
-<section>
+
+<section id="contact">
     <h2>Contact</h2>
-    <p>Email: gyanendraraz@gmail.com</p>
-    <p>Phone: 7542980819</p>
-    <p>
-        <a href="https://www.linkedin.com/in/g7542/" target="_blank" class="btn">
-            LinkedIn
-        </a>
-    </p>
+    <div class="card">
+        <p>Email: gyanendraraz@gmail.com</p>
+        <p>Phone: 7542980819</p>
+        <p>Location: Bengaluru</p>
+    </div>
 </section>
 
 <!-- FOOTER -->
+
 <footer>
     <p>© 2026 Gyanendra Raz | Data Analyst</p>
 </footer>
-```
 
 </body>
 </html>
