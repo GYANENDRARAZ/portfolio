@@ -92,6 +92,35 @@ footer {
     background: #020617;
     color: #94a3b8;
 }
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.kpi-card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #334155;
+}
+
+.kpi-card h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.kpi-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+    background: #2563eb;
+}
 </style>
 
 </head>
@@ -113,11 +142,10 @@ footer {
     <h1>Hi, I'm Gyanendra Raz 👋</h1>
     <p>Data Analyst | SQL | Python | Power BI</p>
 
-```
+
 <a href="Gyanendra_Raz-Data_Analyst.pdf" download class="btn">⬇ Download Resume</a>
 <a href="https://github.com/gyanendraraz" target="_blank" class="btn">GitHub</a>
 <a href="https://www.linkedin.com/in/g7542/" target="_blank" class="btn">LinkedIn</a>
-```
 
 </header>
 
@@ -136,8 +164,39 @@ footer {
 
 <section>
     <h2>Skills</h2>
-    <div class="card">
-        SQL • Python (Pandas) • Excel • Power BI • ETL • Data Cleaning • Query Optimization • Reporting Automation
+
+    <div class="kpi-container">
+
+        <div class="kpi-card">
+            <h3>SQL</h3>
+            <p>Advanced</p>
+        </div>
+
+        <div class="kpi-card">
+            <h3>Python</h3>
+            <p>Pandas, Data Analysis</p>
+        </div>
+
+        <div class="kpi-card">
+            <h3>Power BI</h3>
+            <p>Dashboards & DAX</p>
+        </div>
+
+        <div class="kpi-card">
+            <h3>Excel</h3>
+            <p>Pivot, Automation</p>
+        </div>
+
+        <div class="kpi-card">
+            <h3>ETL</h3>
+            <p>Data Cleaning</p>
+        </div>
+
+        <div class="kpi-card">
+            <h3>Optimization</h3>
+            <p>Query Performance</p>
+        </div>
+
     </div>
 </section>
 
