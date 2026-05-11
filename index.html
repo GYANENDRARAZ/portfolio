@@ -274,75 +274,107 @@ footer {
     transform: translateY(0);
 }
 .project-card{
-    position: relative;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: 0.3s ease;
-    overflow: hidden;
+    background:#f5f5f5;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+    overflow:visible;
+    transition:0.3s ease;
 }
 
 .project-card:hover{
-    transform: translateY(-8px);
+    transform:translateY(-8px);
 }
 
 .project-card h3{
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #222;
+    font-size:42px;
+    margin-bottom:20px;
+    color:#222;
 }
 
 .project-card p{
-    font-size: 15px;
-    line-height: 1.6;
-    color: #555;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    max-width:500px;
 }
 
 .project-link{
-    position: relative;
-    display: inline-block;
-    margin-top: 15px;
+    position:relative;
+    display:inline-block;
+    margin-top:25px;
 }
 
 .project-link a{
-    text-decoration: none;
-    background: #0d6efd;
-    color: white;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
+    text-decoration:none;
+    background:#0d6efd;
+    color:white;
+    padding:14px 28px;
+    border-radius:10px;
+    font-size:20px;
+    font-weight:600;
 }
 
-.project-link a:hover{
-    background: #084298;
+/* DASHBOARD POPUP */
+
+.dashboard-popup{
+    position:absolute;
+    top:-420px;
+    left:120px;
+
+    width:650px;
+    background:white;
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.4s ease;
+
+    z-index:999;
 }
 
-/* HOVER IMAGE */
-
-.hover-image{
-    position: absolute;
-    top: -320px;
-    left: 120px;
-    width: 500px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.9);
-
-    transition: 0.4s ease;
-    z-index: 100;
+.dashboard-popup img{
+    width:100%;
+    border-radius:15px;
 }
 
-/* SHOW IMAGE ON HOVER */
+/* KPI CARDS */
 
-.project-link:hover .hover-image{
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1);
+.kpi-container{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.kpi-card{
+    flex:1;
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:18px;
+    border-radius:15px;
+}
+
+.kpi-card h4{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.kpi-card span{
+    font-size:15px;
+}
+
+/* SHOW ON HOVER */
+
+.project-link:hover .dashboard-popup{
+    opacity:1;
+    visibility:visible;
+    top:-450px;
 }
 
     
@@ -528,14 +560,50 @@ footer {
                 <img src="dash.png" class="hover-image">
         </div>
     <div class="project-card">
-        <h3>Tamil Nadu Election Dashboard</h3>
-        <p>Interactive Power BI dashboard analyzing election results,
+
+    <h3>Tamil Nadu Election Dashboard</h3>
+
+    <p>
+        Interactive Power BI dashboard analyzing election results,
         vote share, constituency winners, margins, and party performance
-        using SQL and DAX.</p>
-        <div class="project-link">
-            <a href="https://github.com/GYANENDRARAZ/superstore-analysis">View Project</a>
-            <img src="election.png" class="hover-image">
+        using SQL and DAX.
+    </p>
+
+    <div class="project-link">
+
+        <a href="https://github.com/GYANENDRARAZ/superstore-analysis" target="_blank">
+            View Project
+        </a>
+
+        <!-- DASHBOARD POPUP -->
+        <div class="dashboard-popup">
+
+            <img src="dash.png" alt="Dashboard">
+
+            <div class="kpi-container">
+
+                <div class="kpi-card">
+                    <h4>234</h4>
+                    <span>Total Seats</span>
+                </div>
+
+                <div class="kpi-card">
+                    <h4>85</h4>
+                    <span>Parties</span>
+                </div>
+
+                <div class="kpi-card">
+                    <h4>6.2 Cr</h4>
+                    <span>Total Votes</span>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
+
+</div>
         
 
      </div>
