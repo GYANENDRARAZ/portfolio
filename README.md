@@ -3,9 +3,9 @@ Hi, I'm Gyanendra Raz 👋
 🚀 Data Analyst with 3+ years of experience in SQL, Python (Pandas), Excel, and Power BI.
 I specialize in data analysis, dashboard development, reporting automation, and transforming raw data into actionable business insights.
 
-🌐 Portfolio: Gyanendra Raz Portfolio
-💼 LinkedIn: Gyanendra Raz LinkedIn
-📧 Email: gyanendraraz@gmail.com
+🌐 Portfolio: [Gyanendra Raz Portfolio](https://gyanendraraz.xyz/)  
+💼 LinkedIn: [Gyanendra Raz LinkedIn](https://www.linkedin.com/in/g7542/)  
+📧 Email: gyanendraraz@gmail.com  
 
 🚀 Technical Skills
 Programming: Python (Pandas)
